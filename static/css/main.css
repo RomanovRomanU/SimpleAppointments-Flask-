@@ -1,0 +1,27 @@
+body {
+    padding-top: 90px;
+}
+.panel-login {
+    border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+#login-submit {
+	background-color: #59B2E0;
+	outline: none;
+	color: #ffff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 8px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+#login-submit:hover,
+#login-submit:focus {
+	color: #fff;
+	background-color: #48D1CC;
+	border-color: #53A3CD;
+}

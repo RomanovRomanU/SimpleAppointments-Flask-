@@ -1,0 +1,31 @@
+#message-box_appointment_add,
+#message-box_appointment_error{
+  left: 40%;
+  bottom: 50%;
+  position: fixed;
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #DCDCDC;
+  color: black;
+  text-align: center;
+  padding: 18px;
+  z-index: 999;
+  font-family: sans-serif;
+  font-size: 15px;
+  -webkit-box-shadow: 0px 0px 34px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 34px -3px rgba(0,0,0,0.75);
+}
+#message-box_appointment_add.show,
+#message-box_appointment_error.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+  -moz-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+  -o-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+  -ms-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+  animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+h3,h3 a {
+  color:white;
+  font: serif;
+}
+

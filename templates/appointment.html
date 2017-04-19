@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/dashboard.css') }}" crossorigin="anonymous">
+    <title>Appointment page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <a class="navbar-brand page-scroll" href="/">All appointments</a> {% if username %}
+            <a class="navbar-brand page-scroll" href="/dashboard">Dashboard</a>
+            <a class="navbar-brand page-scroll" href="/logout">Logout</a> {% endif %} {% if not username %}
+            <a class="navbar-brand page-scroll" href="/login">Login</a> {% endif %}
+            <div class="col-md-4 col-md-offset-2">
+                <a class="navbar-brand page-scroll">Appointment name:{{ appointment['name'] }}</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <form class="form" id='appointmentForm' validate>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-md-3 col-md-offset-2">
+                    <input type="text" name='appointment' value="{{ appointment['name']}}" readonly hidden>
+                    <div class="col-md-12">
+                        <h5>Choose date</h5>
+                        <hr>
+                    </div>
+                    {% for date in appointment['date'].split( ';')%}
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <input class="form-group" type="radio" name="date" value="{{date}}" required> {{date}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="col-md-12">
+                        <h5>Choose time</h5>
+                        <hr>
+                    </div>
+                    {% for i in range(appointment['data_ranges']|int) %} {% set i = (i+1)|string %}
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <input type="radio" name="time" value="{{appointment['timeFrom'+(i)]}}-{{appointment['timeTill'+(i)]}}" required> {{appointment['timeFrom'+(i)]}}-{{appointment['timeTill'+(i)]}} {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-group col-md-4 col-md-offset-4">
+                <input type="text" name="fullname" pattern="[A-Za-zА-Яа-яёЁЇїІіЄєҐґ\s]{2,}" tabindex="1" class="form-control" placeholder="Your Full Name" value="" required>
+            </div>
+            <div class="form-group col-md-4 col-md-offset-4">
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" tabindex="2" class="form-control" placeholder="Your e-mail" required>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="form-group col-md-4 col-md-offset-4">
+                        <input type="button" name="submitForm" id="submitForm" tabindex="4" class="form-control  btn-default" value="Send form">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="{{ url_for('static',filename='js/appointment.js') }}"></script>
+<div id="message-box_appointment_add" class="">Your application was succesfully added!</div>
+<div id="message-box_appointment_error" class="">Your form is not correct!</div>
+
+</html>

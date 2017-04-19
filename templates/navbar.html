@@ -1,0 +1,9 @@
+<nav class="navbar navbar-default ">
+    <div class="container">
+        <a class="navbar-brand page-scroll" href="/">All appointments</a> {% if username %}
+        <a class="navbar-brand page-scroll" href="/dashboard">Dashboard</a>
+        <a class="navbar-brand page-scroll" href="/logout">Logout</a> {% endif %} {% if not username %}
+        <a class="navbar-brand page-scroll" href="/login">Login</a> {% endif %}
+    </div>
+    </div>
+</nav>
