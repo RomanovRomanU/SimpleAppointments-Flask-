@@ -7,9 +7,9 @@ You have to install basic MongoDB Server,and such python packages:
 * bson
 ```
 ```
-* Registration wasn`t realised
-* To create user just go to '/register'
-* Basic User:
-  Login: admin
-  Password: 1111
+- Registration wasn`t realised
+- To create user just go to '/register'
+- Basic User:
+    - Login: admin
+    - Password: 1111
 ```
