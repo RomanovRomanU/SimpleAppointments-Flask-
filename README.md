@@ -2,14 +2,14 @@
 
 ```
 You have to install basic MongoDB Server,and such python packages:
-*Flask
-*PyMongo
-*bson
+* Flask
+* PyMongo
+* bson
 ```
 ```
-*Registration wasn`t realised
-*To create user just go to '/register'
-*Basic User:
+* Registration wasn`t realised
+* To create user just go to '/register'
+* Basic User:
   Login: admin
   Password: 1111
 ```
