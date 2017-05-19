@@ -4,6 +4,7 @@ from flask_pymongo import PyMongo
 # Function for proper handling of MongoDB ID type
 from bson.objectid import ObjectId
 app = Flask(__name__)
+app.debug = True
 # As db I use MongoDB
 mongo = PyMongo(app)
 
@@ -43,6 +44,8 @@ def logout():
 # Dashboard of logged user
 # Where he can create new appointment
 # and view all filled forms
+
+
 @app.route('/dashboard')
 def dashboard():
     if 'username' in session:

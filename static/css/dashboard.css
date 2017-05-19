@@ -1,3 +1,10 @@
+/*body {
+  background-color:rgba(0,0,0,0.1);
+}*/
+.navbar {
+  background-color:rgba(0,0,50,0.2);
+}
+
 #message-box_appointment_add,
 #message-box_appointment_error{
   left: 40%;
@@ -28,4 +35,22 @@ h3,h3 a {
   color:white;
   font: serif;
 }
+.form-control {
+  width:50%;
+  position: relative;
+  left: 25%;
+}
 
+label {
+  width:25%;
+  font-family: sans-serif;
+  font-style: italic;
+  position: relative;
+  left:25%;
+}
+/*.col-md-4,col-xs-3 {
+  width:25%;
+}*/
+/*.form-control {
+  background-color: rgba(0,249,226,0.5) 
+}*/

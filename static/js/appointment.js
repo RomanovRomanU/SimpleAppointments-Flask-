@@ -33,6 +33,10 @@ function validateForm(form) {
     }
     var checkedTime = false;
     var times = form['time'];
+    // If we found only one time
+    if (typeof times == "object"){
+        times = [times];
+    }
     for (index in times) {
         if (times[index].checked == true) {
             checkedTime = true;
